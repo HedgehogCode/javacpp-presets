@@ -32,10 +32,12 @@ case $PLATFORM in
     windows-x86)
         make -j $MAKEJ
         PREFIX=$INSTALL_PATH make install
+        cp ${INSTALL_PATH}/lib/liblz4.a ${INSTALL_PATH}/lib/lz4.lib
         ;;
     windows-x86_64)
         make -j $MAKEJ
         PREFIX=$INSTALL_PATH make install
+        cp ${INSTALL_PATH}/lib/liblz4.a ${INSTALL_PATH}/lib/lz4.lib
         ;;
     *)
         echo "Error: Platform \"$PLATFORM\" is not supported"
