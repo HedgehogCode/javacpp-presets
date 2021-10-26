@@ -18,7 +18,7 @@ import org.bytedeco.lz4.LZ4FPreferences;
  */
 @Properties(inherit = javacpp.class, //
 		value = { //
-				@Platform(compiler = "cpp11", include = { "<lz4.h>", "<lz4hc.h>", "<lz4frame.h>" }, link = "lz4@.1") //
+				@Platform(include = { "<lz4.h>", "<lz4hc.h>", "<lz4frame.h>" }, link = "lz4@.1") //
 		}, //
 		target = "org.bytedeco.lz4", //
 		global = "org.bytedeco.lz4.global.lz4" //
