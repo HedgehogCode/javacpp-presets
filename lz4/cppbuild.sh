@@ -52,4 +52,11 @@ case $PLATFORM in
         ;;
 esac
 
+# fix library with correct rpath on Mac
+case $PLATFORM in
+    macosx-*)
+        install_name_tool -add_rpath @loader_path/. -id @rpath/liblz4.1.dylib ../lib/liblz4.1.dylib
+        ;;
+esac
+
 cd ../..
